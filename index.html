@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOF</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+<!-- <script src="https://cdn.tailwindcss.com/3.3.0"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+    <main class="mx-auto bg-white w-[650px] max-w-full border border-orange-400">
+        <div class="w-full bg-gradient-to-t from-red-700 to-orange-500 h-[85px] flex flex-wrap items-center">
+            <img src="./assets/icon-25.svg" alt="" class="h-[60px] pl-4">
+        </div>
+        <div class="w-full">
+            <img src="./assets/main.jpg" class="w-full"/>
+        </div>
+        <div class="px-8">
+            <div class="py-4">
+                <p class="text-[16px] text-justify text-gray-800 font-normal">Fund transfers that are initiated from your NRO account may require varied documnets based on your source of fund please refer the below able for the documents required under specific source of fund</p>
+            </div>
+            <div class="py-2">
+                <h1 class="font-bold text-[18px] text-gray-800">Source of Funds</h1>
+            </div>
+            <div class="py-2" id="content">
+
+
+
+
+
+                
+                <!-- <div class="group relative transition [overflow-anchor:none] py-1 SOF collapse-header"
+            data-te-collapse-init
+            data-te-collapse-collapsed
+            data-te-target="#collapseTwo5${data.sNo}"
+            aria-expanded="false"
+            aria-controls="collapseTwo5${data.sNo}"
+            >
+            <div class="bg-gray-100 p-2 shadow-md flex flex-row items-center justify-between gap-4" id="collapse-header">
+                <div class="flex flex-row items-center justify-start gap-4">
+                    <div class="bg-orange-500 rounded-full w-[30px] h-[30px] flex flex-wrap flex-shrink-0 items-center justify-center p-0.5">
+                        <h1 class="p-1 text-white font-bold text-center">${data.sNo}</h1>
+                    </div>
+                    <h1 class="text-[16px] font-bold text-gray-600">${data.SourceOfFunds}</h1>
+                </div>
+                <div class="w-[20px] flex flex-shrink-0 items-center justify-end ">
+                    <span
+                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white text-orange-500">
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6 border border-orange-400 rounded-full">
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </span>
+                </div>
+            </div>
+            <div class="collapse-body bg-white py-4 border border-gray-100 rounded-b-lg shadow-md hidden" id="collapseTwo5${data.sNo}"
+            class="!visible hidden bg-white py-4 border border-gray-100 rounded-b-lg shadow-md"
+            data-te-collapse-item
+            aria-labelledby="headingTwo5${data.sNo}"
+            >
+                <div class="grid grid-cols-2 px-2">
+                <div class="px-2 border-r border-r-gray-100">
+                <h6 class="text-[12px] text-gray-600 pb-2">Supporting Documentation</h6>`
+                for (let i=0; i < data.supportingDocumentation.length; i++) {
+                    console.log(data.supportingDocumentation[i]);
+                    output +=`<ul class="list-disc list-outside pl-4 text-[16px]">
+                    <li class="text-justify">${data.supportingDocumentation[i]}</li>
+                    </ul>`
+                }
+                if(data.disclaimer) {
+                    output +=`
+                        <div class="leading-normal text-justify">
+                            <small class="text-gray-600 leading-normal">${data?.disclaimer}</small>
+                        </div>`
+                }
+            output +=`</div>
+                    <div class="px-2">
+                        <h6 class="text-[12px] text-gray-600 pb-2">Type of Income</h6>
+                        <ul class="list-disc list-outside pl-4 text-[16px]">
+                            <li>${data.typeOfIncome}</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            </div> -->
+
+
+
+
+                <div class="insertbefore py-4 w-full flex flex-row flex-wrap items-center justify-center gap-8">
+                    <button id="load-more" onclick="loadData()" class="load-more bg-orange-500 p-2 px-6 rounded-full text-white font-normal tex-[16px] cursor-pointer font-bold">LOAD MORE</button>
+                    <button id="transfer-now" class="text-red-700 font-bold border border-orange-400 py-2 px-6 rounded-full">TRANSFER NOW</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="./main.js"></script>
+    <script>
+        loadInitialItem()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script>
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            fontFamily: {
+              sans: ["Mulish", "sans-serif"],
+              body: ["Mulish", "sans-serif"],
+              mono: ["ui-monospace", "monospace"],
+            },
+          },
+          corePlugins: {
+            preflight: false,
+          },
+        };
+    </script>
+
+</body>
+</html>
